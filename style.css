@@ -43,7 +43,7 @@ button {
 }
 
 .container {
-    width: 30%;
+    width: 35%;
     border: 1px solid black;
     display: flex;
     justify-content: center;
