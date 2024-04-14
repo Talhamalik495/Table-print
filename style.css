@@ -1,5 +1,28 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: black;
+    /* background-color: black; */
+    background-color: rgba(0, 0, 10, 0.8);
+    /* ya image ke pore screen ko gray karna ka lya use hota ha  */
+    /* filter: grayscale(100%); */
+    /* filter: blur(100%); */
+    /* opacity: 0.8; */
+    /* filter: blur(5px); */
+    /* filter: brightness(200%); */
+    /* filter: contrast(200%); */
+    /* filter: drop-shadow(8px 8px 10px red); */
+    /* filter: hue-rotate(90deg); */
+    /* filter: invert(100%); */
+    /* filter: opacity(30%); */
+    /* filter: saturate(8); */
+    /* filter: sepia(100%); */
+    /* filter: contrast(200%) brightness(150%); */
+
+
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,18 +36,58 @@ h1 {
     font-weight: bold;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation-name: react;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes react {
+
+    0%,
+    100% {
+        transform: rotate(360deg);
+    }
+
+    25% {
+        /* transform: rotate(300deg); */
+        transform: scale(1.5);
+        color: orange;
+        /* filter: drop-shadow(15px 10px 20px rgb(182, 40, 5)); */
+    }
+
+    50% {
+        transform: skewX(1.2);
+    }
 }
 
 input {
-    width: 350px;
+    width: 100%;
     border-radius: 5px;
-    height: 25px;
+    height: 40px;
     border-radius: transparent;
     background-color: #fac97a;
+    border-color: transparent;
+}
+
+/* is sa input placholder color change kar sakta ha */
+/* ye edge browser ma use hota ha placeholder wala */
+/* :-ms-input-placeholder {
+    color: red;
+} */
+/* opacity is lya use hota ha kise color ke darkness kam karna ka lya */
+::placeholder {
+    color: rgb(7, 4, 4);
+    font-size: 20px;
+    text-align: start;
+    /* opacity: 1; */
+    /* Firefox */
 }
 
 button {
-    width: 100px;
+    width: 40%;
     height: 25px;
     border-radius: 8px;
     border-color: transparent;
@@ -32,6 +95,10 @@ button {
     color: white;
     padding: 20px;
     /* border-radius: 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 #form {
@@ -39,20 +106,61 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    width: 90%;
 }
 
 .container {
-    width: 35%;
+    width: 50%;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 3px 3px 20px orangered;
+    padding: 40px;
+    /* box-shadow: 3px 3px 20px orangered; */
+    box-shadow: 5px 5px 20px 20px white;
+    /* ofsetx ofsety blur seprate boxshadow */
+    /* inset boxshadow ander ke taraf shadowdata ha */
+    /* box-shadow: inset 2px 2px 8px 20px green; */
+    /* box-shadow: 10px 10px 60px 20px blue; */
 }
 
 .timetable {
+    word-spacing: 50px;
+    /* letter-spacing: 40px; */
     color: #d1814c;
+    font-size: 30px;
+}
+
+/* ya blur  ka lya use hota ha  */
+/* filter blur() */
+
+/* filter:hue-rotate(360deg) */
+@media screen and (max-width:750px) {
+    .container {
+        width: 60%;
+        padding: 30px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    /* input {
+        width: 100%;
+    } */
+}
+
+@media screen and (max-width:300px) {
+    .container {
+        width: 85%;
+    }
 }
