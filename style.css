@@ -31,19 +31,42 @@ body {
 
 }
 
+.container1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
-    color: #d1814c;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(243, 11, 11);
+    position: absolute;
+    bottom: 0.px;
+    /* color: #d1814c; */
     font-weight: bold;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    animation-name: react;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-play-state: running;
 }
 
+.dosreheading {
+    animation: chalte 2s ease-in-out infinite alternate-reverse;
+    color: yellow;
+}
+
+@keyframes chalte {
+
+    0%,
+    100% {
+        clip-path: polygon(62% 60%, 100% 44%, 100% 36%, 100% 98%, 68% 100%, 32% 100%, 1% 100%, 0 34%, 37% 57%);
+    }
+
+    50% {
+        clip-path: polygon(62% 60%, 98% 36%, 100% 36%, 100% 98%, 68% 100%, 32% 100%, 1% 100%, 2% 48%, 37% 57%);
+    }
+}
+
+/* 
 @keyframes react {
 
     0%,
@@ -52,16 +75,27 @@ h1 {
     }
 
     25% {
-        /* transform: rotate(300deg); */
+        transform: rotate(300deg);
         transform: scale(1.5);
+        transform: rotateX(360deg);
+        background-color: white;
         color: orange;
-        /* filter: drop-shadow(15px 10px 20px rgb(182, 40, 5)); */
+        filter: drop-shadow(15px 10px 20px rgb(182, 40, 5));
     }
 
     50% {
         transform: skewX(1.2);
     }
-}
+} */
+
+/* h1:hover {
+    animation-name: react;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+} */
 
 input {
     width: 100%;
