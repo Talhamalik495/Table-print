@@ -6,7 +6,6 @@
 
 body {
     /* background-color: black; */
-    background-color: rgba(0, 0, 10, 0.8);
     /* ya image ke pore screen ko gray karna ka lya use hota ha  */
     /* filter: grayscale(100%); */
     /* filter: blur(100%); */
@@ -15,14 +14,15 @@ body {
     /* filter: brightness(200%); */
     /* filter: contrast(200%); */
     /* filter: drop-shadow(8px 8px 10px red); */
-    /* filter: hue-rotate(90deg); */
     /* filter: invert(100%); */
     /* filter: opacity(30%); */
     /* filter: saturate(8); */
     /* filter: sepia(100%); */
     /* filter: contrast(200%) brightness(150%); */
-
-
+    background-image: url(https://th.bing.com/th/id/OIP._nm99b18Qnnp_tq0lbpYdAHaEo?rs=1&pid=ImgDetMain);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -51,7 +51,7 @@ h1 {
 
 .dosreheading {
     animation: chalte 2s ease-in-out infinite alternate-reverse;
-    color: yellow;
+    color: blue;
 }
 
 @keyframes chalte {
@@ -73,7 +73,7 @@ h1 {
     100% {
         transform: rotate(360deg);
     }
-
+    
     25% {
         transform: rotate(300deg);
         transform: scale(1.5);
@@ -82,7 +82,7 @@ h1 {
         color: orange;
         filter: drop-shadow(15px 10px 20px rgb(182, 40, 5));
     }
-
+    
     50% {
         transform: skewX(1.2);
     }
@@ -98,11 +98,12 @@ h1 {
 } */
 
 input {
+
     width: 100%;
     border-radius: 5px;
     height: 40px;
     border-radius: transparent;
-    background-color: #fac97a;
+    background-color: white;
     border-color: transparent;
 }
 
@@ -125,7 +126,7 @@ button {
     height: 25px;
     border-radius: 8px;
     border-color: transparent;
-    background-color: #753b16;
+    background-color: #080502;
     color: white;
     padding: 20px;
     /* border-radius: 15px; */
@@ -144,6 +145,8 @@ button {
 }
 
 .container {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
     width: 50%;
     border: 1px solid black;
     display: flex;
@@ -153,17 +156,44 @@ button {
     border-radius: 10px;
     padding: 40px;
     /* box-shadow: 3px 3px 20px orangered; */
-    box-shadow: 5px 5px 20px 20px white;
+    /* filter: hue-rotate(50deg); */
     /* ofsetx ofsety blur seprate boxshadow */
     /* inset boxshadow ander ke taraf shadowdata ha */
     /* box-shadow: inset 2px 2px 8px 20px green; */
     /* box-shadow: 10px 10px 60px 20px blue; */
+    animation-name: a;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes a {
+    0% {
+
+        box-shadow: 0px 0px 50px goldenrod;
+    }
+
+    /* 
+    50% {
+        box-shadow: 0px 0px 40px blue;
+
+    }
+
+    75% {
+        box-shadow: 0px 0px 50px rgb(204, 77, 130);
+    } */
+
+    100% {
+        box-shadow: 0px 0px 60px gold;
+    }
+
+    /* 5px 5px 20px */
 }
 
 .timetable {
     word-spacing: 50px;
     /* letter-spacing: 40px; */
-    color: #d1814c;
+    color: white;
     font-size: 30px;
 }
 
